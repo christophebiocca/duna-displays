@@ -42,14 +42,20 @@ body {
 .image-presenter-preloading {
   position: absolute;
   top: 100vh;
+  height: 100%;
+  width: 100%;
 }
 
 .video-presenter-preloading {
   position: absolute;
   top: 100vh;
+  height: 100%;
+  width: 100%;
 }
 
 .iframe-presenter-preloading {
   position: absolute;
   top: 100vh;
+  height: 100%;
+  width: 100%;
 }
