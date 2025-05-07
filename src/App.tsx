@@ -35,7 +35,6 @@ export function App() {
       // Register a timeout to begin loading the next one.
       const timeoutId = setTimeout(function() {
         const [playlist, nextContent] = state.playlist.advance();
-        console.log(playlist, state.playlist);
         setState({
           type: "loadingNext",
           playlist,
