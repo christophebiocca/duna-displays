@@ -5,11 +5,13 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build",
+    "check": "tsc --noemit"
   },
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "reset-css": "^5.0.2"
   },
   "devDependencies": {
     "@types/react": "^19.0.0",

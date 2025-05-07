@@ -1,8 +1,55 @@
 html {
+  display: block;
   color-scheme: light dark;
   font-family: system-ui;
+  height: 100%;
+  background-color: black;
+}
+
+body {
+  display: block;
+  height: 100%;
+}
+
+#app {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+
+.image-presenter-active {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.video-presenter-active {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.iframe-presenter-active {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-presenter-preloading {
+  position: absolute;
+  top: 100vh;
+}
+
+.video-presenter-preloading {
+  position: absolute;
+  top: 100vh;
+}
+
+.iframe-presenter-preloading {
+  position: absolute;
+  top: 100vh;
 }

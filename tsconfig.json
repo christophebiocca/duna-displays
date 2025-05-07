@@ -22,6 +22,7 @@
 
     /* Type Checking */
     "strict": true,
+    "noImplicitReturns": true,
 
     /* Completeness */
     "skipLibCheck": true
