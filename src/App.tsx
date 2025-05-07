@@ -92,7 +92,7 @@ function IFramePresenter(props: {content: IFrameContent, mode: "active" | "prelo
   return <iframe
     className={`iframe-presenter-${props.mode}`}
     src={props.content.url}
-    sandbox=""
+    sandbox="allow-scripts allow-same-origin"
     referrerPolicy="no-referrer"
     credentialless="true"
     onLoad={props.onLoad}
