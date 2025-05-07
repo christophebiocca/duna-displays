@@ -70,6 +70,12 @@ const all_content: ReadonlyArray<Content> = [
     duration: 20,
     weight: 1,
   },
+  {
+    type: "iframe",
+    url: "https://www.wunderground.com/forecast/hn/roat%C3%A1n",
+    duration: 30,
+    weight: 1.2,
+  },
 ];
 
 class ScheduleEntry {
