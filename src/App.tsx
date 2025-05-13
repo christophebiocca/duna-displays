@@ -4,6 +4,20 @@ import { Playlist, Content, ImageContent, VideoContent, IFrameContent } from "./
 import { assertNever } from "./util";
 import { useState, useEffect } from "react";
 
+export function App() {
+  useEffect(function() {
+    // Register a timeout to refresh the entire page.
+    const timeIncrement = 4 * 60 * 60 * 1000;
+    const nextIncrement = (Math.floor(Date.now() / timeIncrement) + 1) * timeIncrement;
+
+    const timeoutId = setTimeout(function() {
+      window.location.reload();
+    }, nextIncrement - Date.now());
+    return () => clearTimeout(timeoutId);
+  }, []);
+  return <Carrousel />;
+}
+
 interface Displaying {
   readonly type: "displaying";
   readonly playlist: Playlist,
@@ -17,10 +31,10 @@ interface LoadingNext {
   readonly nextContent: Content,
 }
 
-type AppState = Displaying | LoadingNext
+type CarrouselState = Displaying | LoadingNext
 
-export function App() {
-  const [state, setState] = useState<AppState>(function(){
+function Carrousel() {
+  const [state, setState] = useState<CarrouselState>(function(){
     const initialPlaylist = Playlist.initialPlaylist();
     const [playlist, currentContent] = initialPlaylist.advance();
     return {
