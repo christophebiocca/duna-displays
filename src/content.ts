@@ -76,6 +76,12 @@ const all_content: ReadonlyArray<Content> = [
     duration: 30,
     weight: 1.2,
   },
+  {
+    type: "iframe",
+    url: "https://duna-101.lovable.app/contacts",
+    duration: 15,
+    weight: 1.5,
+  },
 ];
 
 class ScheduleEntry {
